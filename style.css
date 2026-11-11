@@ -11,7 +11,9 @@ canvas {
   z-index: -1;
 }
 
+/* Klick går igenom texten ner till Pixi-canvasen */
 main {
-  max-width: 40rem;
   padding: 2rem;
+  color: white;
+  pointer-events: none;
 }
