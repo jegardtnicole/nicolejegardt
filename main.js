@@ -3,14 +3,14 @@ const { Application, Graphics, Text } = PIXI;
 gsap.registerPlugin(Physics2DPlugin);
 
 const app = new Application();
-await app.init({ background: "#1099bb", resizeTo: window, antialias: true });
+await app.init({ background: "#97dff1ff", resizeTo: window, antialias: true });
 document.body.appendChild(app.canvas);
 
 app.stage.eventMode = "static";
 app.stage.cursor = "pointer";
 app.stage.hitArea = app.screen;
 
-const colors = ["#ff4d6d", "#ffd166", "#06d6a0", "#4cc9f0", "white"];
+const colors = ["#ff0099", "#00ffff", "#33ff00", "#9900ff", "#ffcc00"];
 
 app.stage.addEventListener("click", (event) => {
   const dotCount = gsap.utils.random(15, 30, 1);
@@ -49,8 +49,8 @@ app.stage.addEventListener("click", (event) => {
 });
 
 const text = new Text({
-  text: "Click to create confetti",
-  style: { fontFamily: "Arial", fontSize: 50, fill: "white", align: "center" },
+  text: "Click to celebrate",
+  style: { fontFamily: "impact", fontSize: 50, fill: "white", align: "center" },
   anchor: 0.5,
   x: app.screen.width / 2,
   y: app.screen.height / 2 - 50,
