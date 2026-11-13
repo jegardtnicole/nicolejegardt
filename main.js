@@ -1,7 +1,9 @@
+//hämtar funktioner från pixi
 const { Application, Graphics, Text } = PIXI;
 
 gsap.registerPlugin(Physics2DPlugin);
 
+//skapar det jag tog från pixi
 const app = new Application();
 await app.init({ background: "#141b1dff", resizeTo: window, antialias: true });
 document.body.appendChild(app.canvas);
@@ -10,8 +12,10 @@ app.stage.eventMode = "static";
 app.stage.cursor = "pointer";
 app.stage.hitArea = app.screen;
 
+//färg till konfetting
 const colors = ["#ff0099", "#00ffff", "#33ff00", "#9900ff", "#ffcc00"];
 
+//skapar konfettin vid klick
 window.addEventListener("click", (event) => {
   const dotCount = gsap.utils.random(15, 30, 1);
 
@@ -29,6 +33,7 @@ window.addEventListener("click", (event) => {
       scale: 0,
     });
 
+//rörelse till cirklarna
     gsap
       .timeline({ onComplete: () => dot.destroy() })
       .to(dot, {
@@ -48,6 +53,7 @@ window.addEventListener("click", (event) => {
   }
 });
 
+//text i mitten av sidan om konfettin
 const text = new Text({
   text: "Click for confetti",
   style: { fontFamily: "impact", fontSize: 50, fill: "lightblue", align: "center" },
