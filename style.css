@@ -14,12 +14,12 @@ canvas {
 /* Klick går igenom texten ner till Pixi-canvasen */
 main {
   padding: 2rem;
-  color: white;
+  color: rgb(239, 128, 198);
   pointer-events: none;
 }
 
 img {
   max-width: 400px;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 150px;
 }

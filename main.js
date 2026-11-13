@@ -3,7 +3,7 @@ const { Application, Graphics, Text } = PIXI;
 gsap.registerPlugin(Physics2DPlugin);
 
 const app = new Application();
-await app.init({ background: "#97dff1ff", resizeTo: window, antialias: true });
+await app.init({ background: "#141b1dff", resizeTo: window, antialias: true });
 document.body.appendChild(app.canvas);
 
 app.stage.eventMode = "static";
@@ -49,8 +49,8 @@ window.addEventListener("click", (event) => {
 });
 
 const text = new Text({
-  text: "Click to celebrate",
-  style: { fontFamily: "impact", fontSize: 50, fill: "white", align: "center" },
+  text: "Click for confetti",
+  style: { fontFamily: "impact", fontSize: 50, fill: "lightblue", align: "center" },
   anchor: 0.5,
   x: app.screen.width / 2,
   y: app.screen.height / 2 - 50,
