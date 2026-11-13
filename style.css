@@ -17,3 +17,9 @@ main {
   color: white;
   pointer-events: none;
 }
+
+img {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 80px;
+}

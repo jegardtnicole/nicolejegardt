@@ -12,7 +12,7 @@ app.stage.hitArea = app.screen;
 
 const colors = ["#ff0099", "#00ffff", "#33ff00", "#9900ff", "#ffcc00"];
 
-app.stage.addEventListener("click", (event) => {
+window.addEventListener("click", (event) => {
   const dotCount = gsap.utils.random(15, 30, 1);
 
   for (let i = 0; i < dotCount; i++) {
